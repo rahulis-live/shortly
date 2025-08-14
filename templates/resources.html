@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - Shortly</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <nav class="navbar">
+                <div class="nav-brand">
+                    <i class="fas fa-link"></i>
+                    <span>Shortly</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('features') }}">Features</a></li>
+                    <li><a href="{{ url_for('pricing') }}">Pricing</a></li>
+                    <li><a href="{{ url_for('resources') }}" class="active">Resources</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Resources & Documentation</h1>
+                <p>Everything you need to make the most of Shortly</p>
+            </div>
+        </section>
+
+        <!-- Resources Grid -->
+        <section class="resources-section">
+            <div class="container">
+                <div class="resources-grid">
+                    <!-- Documentation -->
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>Documentation</h3>
+                        <p>Complete API documentation, integration guides, and best practices.</p>
+                        <a href="#" class="resource-link">View Documentation <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- API Reference -->
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>API Reference</h3>
+                        <p>Detailed API endpoints, authentication, and code examples.</p>
+                        <a href="#" class="resource-link">Explore API <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- Tutorials -->
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Tutorials</h3>
+                        <p>Step-by-step guides to help you get started and master Shortly.</p>
+                        <a href="#" class="resource-link">Browse Tutorials <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- Blog -->
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-blog"></i>
+                        </div>
+                        <h3>Blog</h3>
+                        <p>Latest updates, tips, and insights about link management and marketing.</p>
+                        <a href="#" class="resource-link">Read Blog <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Start Guide -->
+        <section class="quick-start">
+            <div class="container">
+                <h2>Quick Start Guide</h2>
+                <div class="steps-grid">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h4>Create Your Account</h4>
+                        <p>Sign up for free and get instant access to all basic features.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h4>Shorten Your First Link</h4>
+                        <p>Paste any URL and get a short, shareable link in seconds.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h4>Track Performance</h4>
+                        <p>Monitor clicks, engagement, and analytics in real-time.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h4>Optimize & Scale</h4>
+                        <p>Use advanced features to grow your audience and improve results.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community -->
+        <section class="community-section">
+            <div class="container">
+                <h2>Join Our Community</h2>
+                <div class="community-grid">
+                    <div class="community-item">
+                        <i class="fab fa-github"></i>
+                        <h4>GitHub</h4>
+                        <p>Open source contributions and discussions</p>
+                        <a href="#" class="community-link">Join GitHub</a>
+                    </div>
+                    <div class="community-item">
+                        <i class="fab fa-discord"></i>
+                        <h4>Discord</h4>
+                        <p>Real-time chat with developers and users</p>
+                        <a href="#" class="community-link">Join Discord</a>
+                    </div>
+                    <div class="community-item">
+                        <i class="fab fa-twitter"></i>
+                        <h4>Twitter</h4>
+                        <p>Latest updates and announcements</p>
+                        <a href="#" class="community-link">Follow Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support -->
+        <section class="support-section">
+            <div class="container">
+                <h2>Need Help?</h2>
+                <p>Our support team is here to help you succeed</p>
+                <div class="support-options">
+                    <a href="#" class="support-option">
+                        <i class="fas fa-headset"></i>
+                        <span>Contact Support</span>
+                    </a>
+                    <a href="#" class="support-option">
+                        <i class="fas fa-comments"></i>
+                        <span>Live Chat</span>
+                    </a>
+                    <a href="#" class="support-option">
+                        <i class="fas fa-question-circle"></i>
+                        <span>FAQ</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

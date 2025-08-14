@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortly - Short Links, Big Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <nav class="navbar">
+                <div class="nav-brand">
+                    <i class="fas fa-link"></i>
+                    <span>Shortly</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="{{ url_for('index') }}" class="active">Home</a></li>
+                    <li><a href="{{ url_for('features') }}">Features</a></li>
+                    <li><a href="{{ url_for('pricing') }}">Pricing</a></li>
+                    <li><a href="{{ url_for('resources') }}">Resources</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="hero-section">
+                <div class="hero-content">
+                    <h1>Short Links, Big Results</h1>
+                    <p>Transform your long URLs into short, shareable links that drive engagement and track performance.</p>
+                </div>
+            </div>
+
+            <!-- URL Shortener Form -->
+            <div class="shortener-section">
+                <div class="container">
+                    <div class="shortener-card">
+                        <form id="urlForm" class="url-form">
+                            <div class="input-group">
+                                <input type="url" id="urlInput" placeholder="Paste your long URL here..." required>
+                                <button type="submit" id="shortenBtn">
+                                    <i class="fas fa-cut"></i>
+                                    Shorten
+                                </button>
+                            </div>
+                        </form>
+
+                        <!-- Loading State -->
+                        <div id="loadingContainer" class="loading-container" style="display: none;">
+                            <div class="loading-spinner"></div>
+                            <p>Creating your short link...</p>
+                        </div>
+
+                        <!-- Error Container -->
+                        <div id="errorContainer" class="error-container" style="display: none;">
+                            <div class="error-content">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <span id="errorMessage">An error occurred</span>
+                                <button id="dismissError" class="dismiss-btn">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Result Container -->
+                        <div id="resultContainer" class="result-container" style="display: none;">
+                            <div class="result-header">
+                                <h3>Your Shortened URL</h3>
+                                <button id="newUrlBtn" class="new-url-btn">
+                                    <i class="fas fa-plus"></i>
+                                    New URL
+                                </button>
+                            </div>
+                            <div class="result-content">
+                                <div class="url-info">
+                                    <div class="original-url">
+                                        <label>Original URL:</label>
+                                        <span id="originalUrl"></span>
+                                    </div>
+                                    <div class="shortened-url">
+                                        <label>Shortened URL:</label>
+                                        <div class="url-display">
+                                            <span id="shortenedUrl"></span>
+                                            <button id="copyBtn" class="copy-btn" title="Copy to clipboard">
+                                                <i class="fas fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="result-actions">
+                                    <a id="testLink" href="#" target="_blank" class="test-btn">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Test Link
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Preview -->
+            <div class="features-preview">
+                <div class="container">
+                    <h2>Why Choose Shortly?</h2>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <i class="fas fa-rocket"></i>
+                            <h3>Lightning Fast</h3>
+                            <p>Create short links instantly with our optimized platform.</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Analytics</h3>
+                            <p>Track clicks, engagement, and performance in real-time.</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Secure</h3>
+                            <p>Enterprise-grade security with SSL encryption.</p>
+                        </div>
+                    </div>
+                    <div class="cta-section">
+                        <a href="{{ url_for('features') }}" class="cta-button">Explore All Features</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

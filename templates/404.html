@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Link Not Found | Shortly</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <nav class="navbar">
+                <div class="nav-brand">
+                    <i class="fas fa-link"></i>
+                    <span>Shortly</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('features') }}">Features</a></li>
+                    <li><a href="{{ url_for('pricing') }}">Pricing</a></li>
+                    <li><a href="{{ url_for('resources') }}">Resources</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Error Content -->
+        <div class="error-page">
+            <div class="error-content">
+                <div class="error-icon">
+                    <i class="fas fa-link-slash"></i>
+                </div>
+                <h1>404</h1>
+                <h2>Link Not Found</h2>
+                <p>The shortened link you're looking for doesn't exist or has expired.</p>
+                <div class="error-actions">
+                    <a href="{{ url_for('index') }}" class="primary-btn">
+                        <i class="fas fa-home"></i>
+                        Go Home
+                    </a>
+                    <a href="{{ url_for('index') }}" class="secondary-btn">
+                        <i class="fas fa-cut"></i>
+                        Create New Link
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
